@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ==================================================================================
+	04/9/2012
+	Minor Change
+	Brought in annotations for Jaxb binding
+======================================================================================= --><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb" jaxb:extensionBindingPrefixes="xjc" jaxb:version="1.0" targetNamespace="http://newyorklife.com/schemas/cim/common/amount" version="1.1" xmlns:nyldoc="http://newyorklife.com/schemas/standard/documentation" xmlns:tns="http://newyorklife.com/schemas/cim/common/amount" xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc">
+<xsd:import namespace="http://newyorklife.com/schemas/cim/common/jaxbbinding" schemaLocation="JaxbBinding_1.xsd"/>
+<xsd:annotation>
+		
+		<xsd:documentation>Amount of type decimal</xsd:documentation>
+  </xsd:annotation>
+    <xsd:simpleType name="AmountType">
+    <xsd:annotation>
+			<xsd:documentation xml:lang="en">
+				<nyldoc:UniqueID>UNDT000001</nyldoc:UniqueID>
+				<nyldoc:Acronym>CCT</nyldoc:Acronym>
+				<nyldoc:DictionaryEntryName>
+    			Amount. Type
+    		</nyldoc:DictionaryEntryName>
+				<nyldoc:Version>2.01</nyldoc:Version>
+				<nyldoc:Definition>
+    			A number of monetary units specified in a currency where
+    			the unit of the currency is explicit or implied.
+    		</nyldoc:Definition>
+				<nyldoc:PrimaryRepresentationTerm>
+    			Amount
+    		</nyldoc:PrimaryRepresentationTerm>
+				<nyldoc:PrimitiveType>decimal</nyldoc:PrimitiveType>
+			</xsd:documentation>
+		</xsd:annotation>
+    	<xsd:restriction base="xsd:decimal">
+    	</xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>

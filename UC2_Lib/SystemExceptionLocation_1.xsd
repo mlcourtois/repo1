@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ====================================================================== --><!-- ===== System Exception Location       				                                                        ===== --><!-- ====================================================================== --><!--
+  	Scheme Owner: 		(exp: Enterprise Information and Data Architecture)
+  	Scheme version:		(exp:  1.0)
+  	Schema date: 		    (exp: March 2011)
+  	
+  	Copyright (C) New York Life (2009). All Rights Reserved.
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	New York Life Insurance Co.
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and NEW YORK LIFE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE. 
+--><!-- ====================================================================== --><!-- Modifications:                                                                                                                         --><!-- xx/xx/xxxx                                                                                                                             --><!--     - Major/Minor Change                                                                                                          --><!-- ====================================================================== --><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://newyorklife.com/schemas/framework/systemexceptionlocation" version="1.0" xmlns:tns="http://newyorklife.com/schemas/framework/systemexceptionlocation">
+	<xsd:annotation>
+		<xsd:documentation>
+	    Service Framework schema defines the architectural types required by all service
+	    consumers and providers including base requests, responses and exceptions.
+	    Context provides correlation across these types.
+	</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="SystemExceptionLocation" type="tns:SystemExceptionLocationType">
+		<xsd:annotation>
+			<xsd:documentation>Elements for Request message</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:simpleType name="SystemExceptionLocationType">
+		<xsd:annotation>
+			<xsd:documentation>Indicates if a System exception occured on the service provider (SERVICE_SIDE)
+		                or service consumer (CLIENT_SIDE, which is prior to sending, such as a serialization issue or network down or after receiving, such as a deserialization issue.)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CLIENT_SIDE"/>
+			<xsd:enumeration value="SERVICE_SIDE"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

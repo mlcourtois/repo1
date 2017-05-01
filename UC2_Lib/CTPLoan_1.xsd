@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ====================================================================== --><!-- ===== CTP Loan                      			                  ===== --><!-- ====================================================================== --><!--
+  	Scheme Owner: 		(exp: Enterprise Information and Data Architecture)
+  	Scheme version:		(exp:  2.0)
+  	Schema date: 		(exp: January 2013)
+  	
+  	Copyright (C) New York Life (2009). All Rights Reserved.
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	New York Life Insurance Co.
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and NEW YORK LIFE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE. 
+--><!-- =====================================================================	
+	 Modifications:                                                        	
+	 01/22/2013		1.0	Major	Shrey:Created Schema.            	
+	 ===================================================================== --><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://newyorklife.com/schemas/cim/financialcontract/ctploan" version="1.0" xmlns:amount="http://newyorklife.com/schemas/cim/common/amount" xmlns:contract="http://newyorklife.com/schemas/cim/financialcontract/contract" xmlns:datetype="http://newyorklife.com/schemas/cim/common/datetype" xmlns:indicator="http://newyorklife.com/schemas/cim/common/indicator" xmlns:tns="http://newyorklife.com/schemas/cim/financialcontract/ctploan">
+	
+	<xsd:import namespace="http://newyorklife.com/schemas/cim/common/amount" schemaLocation="Amount_1.xsd"/>
+	<xsd:import namespace="http://newyorklife.com/schemas/cim/financialcontract/contract" schemaLocation="Contract_6.xsd"/>	
+	<xsd:import namespace="http://newyorklife.com/schemas/cim/common/datetype" schemaLocation="DateType_1.xsd"/>
+	<xsd:import namespace="http://newyorklife.com/schemas/cim/common/indicator" schemaLocation="Indicator_1.xsd"/>
+	
+	<xsd:annotation>
+		<xsd:documentation>Type for CTP loan</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:complexType name="CTPLoanType">
+		<xsd:annotation>
+			<xsd:documentation>CTP Loan Type</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element maxOccurs="1" minOccurs="0" name="Contract" type="contract:ContractType"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="FedBackupWhldQuoteIn" type="indicator:IndicatorType"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="FedGainWhldQuoteIn" type="indicator:IndicatorType"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="LoanValueAsOfDt" type="datetype:DateType"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="OverrideLoanQuoteAm" type="amount:AmountType"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="StBackupWhldQuoteIn" type="indicator:IndicatorType"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="StGainWhldQuoteIn" type="indicator:IndicatorType"/>
+			<xsd:element maxOccurs="1" minOccurs="0" name="TaxExemptQuoteIn" type="indicator:IndicatorType"/>	
+		</xsd:sequence>
+	</xsd:complexType>		
+</xsd:schema>

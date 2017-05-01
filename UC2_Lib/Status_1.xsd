@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ====================================================================== --><!-- ===== Status Type             									                                                        ===== --><!-- ====================================================================== --><!--
+  	Scheme Owner: 		(exp: Enterprise Information and Data Architecture)
+  	Scheme version:		(exp:  1.0)
+  	Schema date: 		    (exp: March 2011)
+  	
+  	Copyright (C) New York Life (2009). All Rights Reserved.
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	New York Life Insurance Co.
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and NEW YORK LIFE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE. 
+--><!-- ======================================================================
+	Modifications:
+		05/22/12		Minor	1.1		Bob - Added ERROR, support multiples were some inputs have errors.
+		08/17/2016		Minor	1.2		Chloe - Added CLIENT_ID_MISMATCH to support ClientFatcaInfoSearch app
+ ====================================================================== --><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://newyorklife.com/schemas/framework/status" version="1.1" xmlns:tns="http://newyorklife.com/schemas/framework/status">
+  
+	<xsd:annotation>
+		<xsd:documentation>
+	    Service Framework schema defines the architectural types required by all service
+	    consumers and providers including base requests, responses and exceptions.
+	    Context provides correlation across these types.
+	</xsd:documentation>
+	</xsd:annotation>
+	
+	<xsd:element name="Status" type="tns:StatusType"/>
+	
+	<xsd:simpleType name="StatusType">
+		<xsd:annotation>
+			<xsd:documentation>Return status for a valid response (not an exception).</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="SUCCESS"/>
+			<xsd:enumeration value="FAILURE"/>
+			<xsd:enumeration value="RETRY"/>
+			<xsd:enumeration value="FORCEABLE_ERROR"/>
+			<xsd:enumeration value="WARNING"/>
+			<xsd:enumeration value="NO_DATA_FOUND"/>
+			<xsd:enumeration value="ERROR"/>
+			<xsd:enumeration value="CLIENT_ID_MISMATCH"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+</xsd:schema>

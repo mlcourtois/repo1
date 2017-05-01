@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ====================================================================== --><!-- ===== Error Message Type     									                                                        ===== --><!-- ====================================================================== --><!--
+  	Scheme Owner: 		(exp: Enterprise Information and Data Architecture)
+  	Scheme version:		(exp:  1.0)
+  	Schema date: 		    (exp: March 2011)
+  	
+  	Copyright (C) New York Life (2009). All Rights Reserved.
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	New York Life Insurance Co.
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and NEW YORK LIFE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE. 
+--><!-- ====================================================================== --><!-- Modifications:                                                                                                                         --><!-- 09/21/2011                                                                                                                             --><!--      - Major Change  
+Changed the Core StatusType and text type                                                                                                           --><!-- ====================================================================== --><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://newyorklife.com/schemas/framework/servicestatus" version="1.0" xmlns:messagetype="http://newyorklife.com/schemas/framework/messagetype" xmlns:status="http://newyorklife.com/schemas/framework/status" xmlns:tns="http://newyorklife.com/schemas/framework/servicestatus">
+	<xsd:import namespace="http://newyorklife.com/schemas/framework/status" schemaLocation="Status_1.xsd"/>
+	<xsd:import namespace="http://newyorklife.com/schemas/framework/messagetype" schemaLocation="MessageType_1.xsd"/>
+	<xsd:annotation>
+		<xsd:documentation>
+			Service Framework schema defines the architectural types
+			required by all service consumers and providers including
+			base requests, responses and exceptions. Context provides
+			correlation across these types.
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="ServiceStatus" type="tns:ServiceStatusType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Elements for Request message
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="ServiceStatusType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Used when the request has multiple requests
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="Status" type="status:StatusType"/>
+			<xsd:element maxOccurs="unbounded" minOccurs="0" name="ServiceMessage" type="messagetype:MessageType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

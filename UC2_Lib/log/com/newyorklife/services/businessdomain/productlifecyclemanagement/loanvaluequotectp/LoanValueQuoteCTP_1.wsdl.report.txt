@@ -1,0 +1,52 @@
+
+
+Importing file: C:\Workspaces_New\NYL\UC2_Prj\LoanValueQuoteCTP_1.wsdl
+
+The WSDL import will proceed with bindings LoanValueQuoteCTPBinding.
+Creating wsdl schema document for file:///C:/Workspaces_New/NYL/UC2_Prj/LoanValueQuoteCTP_1.wsdl.
+Parsing wsdl binding {http://newyorklife.com/services/businessdomain/productlifecyclemanagement/loanvaluequotectp}LoanValueQuoteCTPBinding.
+Parsing wsdl binding input calculateLoanValues.
+Parsing wsdl binding output calculateLoanValues.
+Parsing wsdl binding fault BusinessException.
+Parsing wsdl binding fault SystemException.
+Parsing wsdl binding fault FatalException.
+Processing doc style for operation calculateLoanValues.
+Populating WSDL schema LoanValueQuoteCTP_1.xsd.
+Removing unnecessary import statement with namespace http://newyorklife.com/schemas/cim/common/datetype from schema /UC2_Lib/LoanRequestsResponses_1.xsd.  This statement was not resolved and is never used.
+Creating file LoanValueQuoteCTP_1.xsd in the workspace.
+Creating file LoanValueQuoteCTP_1_InlineSchema1.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/BusinessException_2.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/ServiceException_2.xsd in the workspace.
+Creating file /UC2_Lib/Severity_1.xsd in the workspace.
+Creating file /UC2_Lib/ExceptionEntry_2.xsd in the workspace.
+Creating file /UC2_Lib/ErrorCode_2.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/ContextSummary_2.xsd in the workspace.
+Creating file /UC2_Lib/Param_2.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/FatalException_2.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/UC2_Lib/SystemException_2.xsd in the workspace.
+Creating file /UC2_Lib/SystemExceptionLocation_1.xsd in the workspace.
+Creating file /UC2_Lib/LoanRequestsResponses_1.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/Amount_1.xsd in the workspace.
+Creating file /UC2_Lib/JaxbBinding_1.xsd in the workspace.
+Creating file /UC2_Lib/BaseRequest_2.xsd in the workspace.
+Creating file /UC2_Lib/BaseResponse_3.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/UC2_Lib/Status_1.xsd in the workspace.
+Creating file /UC2_Lib/BusinessAndServiceStatus_2.xsd in the workspace.
+Creating file /UC2_Lib/BusinessStatus_1.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/MessageType_1.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/UC2_Lib/DecodeType_1.xsd in the workspace.
+Creating file /UC2_Lib/ServiceStatus_1.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/UC2_Lib/DateType_1.xsd in the workspace.
+Creating file /UC2_Lib/UC2_Lib/Contract_6.xsd in the workspace.
+Creating file /UC2_Lib/IDType_1.xsd in the workspace.
+Creating file /UC2_Lib/CTPLoan_1.xsd in the workspace.
+Creating file /UC2_Lib/Indicator_1.xsd in the workspace.
+Copying source WSDL LoanValueQuoteCTP_1.wsdl to LoanValueQuoteCTP_1.wsdl.
+
+Elapsed time processing this message definition file: 1.02 seconds
+Number of warnings for this message definition file: 0
+
+
+Number of files processed: 1
+
+

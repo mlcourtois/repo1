@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- ====================================================================== --><!-- ===== Base Request        									                                                        ===== --><!-- ====================================================================== --><!--
+  	Scheme Owner: 		(exp: Enterprise Information and Data Architecture)
+  	Scheme version:		(exp:  1.0)
+  	Schema date: 		    (exp: March 2011)
+  	
+  	Copyright (C) New York Life (2009). All Rights Reserved.   l
+
+	This document and translations of it may be copied and furnished to others, 
+	and derivative works that comment on or otherwise explain it or assist 
+	in its implementation may be prepared, copied, published and distributed, 
+	in whole or in part, without restriction of any kind, provided that the 
+	above copyright notice and this paragraph are included on all such copies 
+	and derivative works. However, this document itself may not be modified in 
+	any way, such as by removing the copyright notice or references to 
+	New York Life Insurance Co.
+
+	This document and the information contained herein is provided on an "AS IS"
+	basis and NEW YORK LIFE DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING 
+	BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF THE INFORMATION HEREIN WILL 
+	NOT INFRINGE ANY RIGHTS OR ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR 
+	FITNESS FOR A PARTICULAR PURPOSE. 
+--><!-- ====================================================================== 
+ Modifications:                                                                                                                        
+ 09/21/2011                                                                                                                            
+      - Major Change  
+Changed the CoreBusinessTypes  
+ 02/08/2012                                                                                                                            
+      - Minor Change  
+Removed the AsOfDt and deprecated                                                                                                       
+ ====================================================================== --><xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://newyorklife.com/schemas/framework/baserequest" version="2.1" xmlns:tns="http://newyorklife.com/schemas/framework/baserequest">
+
+	
+   
+    <xsd:annotation>
+		<xsd:documentation>
+			Defines the Base Request Class
+		</xsd:documentation>
+	</xsd:annotation>
+	<xsd:element name="BaseRequest" type="tns:BaseRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				Elements for Request message
+			</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:complexType name="BaseRequestType">
+		<xsd:annotation>
+			<xsd:documentation>
+				All Base Requests should use or extend this type
+			</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+		
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+</xsd:schema>
